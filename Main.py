@@ -133,35 +133,6 @@ if operation == 3:
             #here it deletes old values and adds new average values
     img_printer(img)
 
-# if operation == 4:
-# #   stride = input()
-#     file = input()
-#     fp = open(file)
-#     lst = fp.read().split()
-#     fp.close()
-#     kist=[]
-#     for i in lst:
-#         a = int(i)
-#         kist.append(a)
-#     print(kist)
-#     b = (len(kist))**(1/2)
-#     # print(lst)
-#     row = len(img)
-#     col = len(img[0])
-#     cha = len(img[0][0])
-#     # def func(x,y,z=0):
-#     #     a = img[x][y][0]*kist[z]
-#     #     if x==0 and y<b:
-#     #         return func(x,y+1,z+1)
-#     #     return func2(x+1,y-b,z+1)
-#     # def func2(x,y,z):
-#     #     b = img[x][y][z]*kist[z]
-#     #     if x==1 and y<b:
-#     #         return func(x, y + 1, z + 1)
-#     #     return func2(x + 1, y - b, z + 1)
-#     for i in range(b):
-#         for j in range(b):
-#             for k in range(cha):
 # I could not write 4 and 5
 
 if operation == 6:
