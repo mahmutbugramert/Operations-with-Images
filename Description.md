@@ -13,3 +13,56 @@
 ##### The formula for min-max normalization is as follows:
 
 ![minmax_norm](https://user-images.githubusercontent.com/124915257/221966306-b292f2ac-57bd-4422-af3a-49a78957ff16.png)
+##### Make sure to round your normalized result to 4 decimal places.
+##### operation == 2
+##### When operation input is 2, you will apply z-score normalization.
+##### This case does not require additional inputs. You will find channelwise means and standard deviations, and output the normalized image.
+##### The required formulas are provided below:
+
+![zscore_norm](https://user-images.githubusercontent.com/124915257/221969917-c554f59c-cc8c-4edc-b6b7-38952997230e.png)
+##### There are two additional details:
+##### Add the number 1e-6 to your standard deviation result to make sure that if there is an input which makes the standard deviation equal to 0, you don't get an error.
+##### Round your normalized result to 4 decimal places.
+##### operation == 3
+##### When operation input is 3, you will convert the image to black and white. This case does not require additional inputs.
+##### This can easily be done by taking the average of each pixel's channel values, and assigning to each channel the average value.
+##### For example, if a pixel's channel values are [12, 13, 14], you can do (12 + 13 + 14) / 3 = 13 and assign to that pixel's channels [13, 13, 13] and that's it.
+
+##### operation == 4
+##### When operation input is 4, you will apply convolution to the image.
+##### You will be provided two additional inputs: one is the filename of a filter which will be located under the src folder
+##### and the other is a stride parameter which denotes how many steps the filter will move after each summation is complete.
+##### Important: If the weighted sum exceeds the image maximum color value or becomes less than 0, you must clip it such that it is always between 0 and maximum color value.
+##### Each input will be given in separate lines. An example of the operation is provided below where stride is 1:
+
+![convolution](https://user-images.githubusercontent.com/124915257/221970079-5edcd8df-b9db-4660-97d8-01073326473a.png)
+##### operation == 5
+##### When operation input is 5, you will again apply convolution to the image, but this time you
+##### will pad zeros to the edges of your input image so that your output image has the same dimensions as your input image.
+##### You will once more be provided two additional inputs: one is the filename of a filter which will be located under the src folder
+##### and the other is a stride parameter which denotes how many steps the filter will move after each summation is complete.
+##### Important: If the weighted sum exceeds the image maximum color value or becomes less than 0, you must clip it such that it is always between 0 and maximum color value.
+##### Each input will be given in separate lines.
+
+##### operation == 6
+##### When operation input is 6, you will apply color quantization to the image.
+##### You will get a range input which you will use to compare whether two pixels are similar enough to be grouped together or not. Input will be given in a separate line.
+##### The rule for this quantization is simple, if all the channel values between two pixels differ by less than the range, then they will be made equal.
+##### Important: This quantization part is required to be a recursive implementation.
+##### You will start from the pixel at (0,0) coordinates and check each of its valid neighbors.
+
+##### operation == 7
+##### When operation input is 7, you will again apply color quantization to the image but this time it is a 3d quantization.
+##### You will get a range input which you will use to compare whether two channel values are similar enough to be grouped together or not.
+##### The rule for this quantization is if the channel values between two neighbours differ by less than the range, then they will be made equal.
+##### Note that this time, different channels of the same pixel are considered as neighbors as well as the same channel on different pixels. Important: This quantization part is required to be a recursive implementation.
+##### You will start from the channel at (0,0,0) coordinates and check each of its valid neighbors.
+
+##### Check the examples for further clarification. Keep in mind that we will be grading your code not just based on these examples, but other cases as well, so try to write code which can handle all possible cases.
+
+##### Warning: You are not allowed to use any imports and any topics that haven't been covered this semester.
+
+##### You will be provided example operation input and outputs on Moodle. src folder contains certain input files you will need. If you alter these files by accident, you can also find the original versions on Moodle.
+##### The recursion depth limit is assumed to be 1000, and inputs are provided accordingly.
+
+
