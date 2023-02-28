@@ -1,4 +1,4 @@
-# In this homework, you will write a Python program to make some calculations on 3D pixels of some images.
+###### In this homework, you will write a Python program to make some calculations on 3D pixels of some images.
 # We will use the ppm image format for reading image files. You are provided with two functions:
 # read_ppm_file(f) which (is a function you are familiar with from the lectures) will enable you to read .ppm files to a 3d list.
 # img_printer(img) which is a function that prints 3d lists in a readable manner. You will use this and only this to output your results.
